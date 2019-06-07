@@ -1,14 +1,19 @@
 import React from 'react';
 import Layout from './components/Layout/Layout';
+import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
-function App() {
-  return (
+const app = () => (
     <div>
       <Layout>
-        <p>Test</p>
+        <BurgerBuilder />
       </Layout>
     </div>
-  );
-}
+);
 
-export default App;
+export default app;
+
+/**
+ *  function App() {
+ *  return (<div> ... </div>) 
+ * }
+ */
