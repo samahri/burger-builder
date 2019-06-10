@@ -45,4 +45,4 @@ Ingredient.propTypes = {
     type: PropTypes.string.isRequired
 }
 
-export default ingredient;
+export default Ingredient;
