@@ -5,12 +5,20 @@ import Ingredient from './Ingredient/Ingredient.js';
 
 
 const burger = (props) => {
+    // can't loop over an object
+    const transformedIngredients = Object.keys(props.ingredients) // returns an array of the keys
+                                            .map(igKey => {
+                                                return [...Array(props.ingredients[igKey])]
+                                                            .map((_, i) => {
+                                                                return <Ingredient key={igKey + i} type={igKey}/>;
+                                                            })
+                                            }); 
+    
     return (
         <div className={classes.Burger}>
             <Ingredient type="bread-top"/>
-            <Ingredient type="cheese"/>
-            <Ingredient type="meat"/>
-            <Ingredient type="bread-bottom"/>
+           {transformedIngredients}
+            <Ingredient type="bread-bottom"/> 
         </div>
     );
 };
