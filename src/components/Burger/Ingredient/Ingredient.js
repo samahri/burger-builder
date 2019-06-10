@@ -36,7 +36,7 @@ class Ingredient extends React.Component {
                 break;
             }
 
-        return ingredient;
+        return burgerIngredient;
     }
 }
 
